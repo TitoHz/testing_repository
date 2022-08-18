@@ -20,18 +20,15 @@ def old_macdonald(name):
     """
     Capitalizes the first and the fourth letter of a name
     """
-    newList = []
-    a = len(name)
-    for x in name:
-        if name >= 4:
-            print(x[0])
-        
-    
-   
-        
-        
+    if len(name) > 3:
+        print(name[:3].capitalize() + name[3:].capitalize())
+        return name[:3].capitalize() + name[3:].capitalize()
+    else:
+        print(name.capitalize())
+        return name.capitalize()
 
-old_macdonald("anorlondor")
+
+    
 
 
 
