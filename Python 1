@@ -1,16 +1,24 @@
-def add(a,b):
-    try:
-        c = a + b
-        print("The total sum is: ", c)
-    except:
-        print("Invalid Input")
 
-try:
-    s = int(input("Type the first number ----> "))
-    d = int(input("Type the second number ----> "))
-except:
-    print("check again the number that you typed.")
 
-add(s,d)
+def lesser_or_greater_number(a, b):
+    """
+    Return the lesser number if both numbers are evens.
+    Return the greater number if they aren't.
+    """
+    if (a and b) % 2 == 0:
+        if a < b:
+            return a
+        else:
+            return b 
+
+    else:
+        if a > b:
+            return a
+        else:
+            return b
+
+
+
+
 
 
