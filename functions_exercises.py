@@ -1,7 +1,8 @@
 from ast import Str
+from cgi import print_arguments
 
 test_string = "I am in home and I am hungry"
-test_list = [1, 0, 3, 0, 5, 6, 7]
+test_list = [1, 0, 3, 0, 0, 5, 6, 7]
 
 
 def lesser_or_greater_number(a, b):
@@ -78,14 +79,21 @@ def spy_games(num_list):
     SPY GAME: Write a function that takes in a list of integers
     and returns True if it contains 007 in order
 
-    test_list = [1, 0, 3, 0, 5, 6, 7]
+    test_list = [1, 0, 0, 0, 0, 3, 0, 5, 6, 7]
     spy_game([1,0,2,4,0,5,7]) --> True
     spy_game([1,7,2,0,4,5,0]) --> False    
     """
-    print(num_list[:])
-    #x = 0
-    #while x <= len(num_list):
+    code = [0, 0, 7, "x"]
+    for x in num_list:
+        if x == code[0]:
+            code.pop(0)
+                 
+    return len(code) == 1
+        
+def test():
+    if spy_games([0, 0, 7, 0, 4, 5]) == True:
+        print("yes sir")
+    else:
+        print("no, dick sucker")
 
-
-
-spy_games(test_list)
+test()
