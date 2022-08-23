@@ -1,6 +1,9 @@
 from ast import Str
 
 test_string = "I am in home and I am hungry"
+test_list = [1, 0, 3, 0, 5, 6, 7]
+
+
 def lesser_or_greater_number(a, b):
     """
     Return the lesser number if both numbers are evens.
@@ -56,7 +59,6 @@ def count_primes(number):
     x = 3
     while x <= number:
         for y in range(3,x,2):  # test all odd factors up to x-1
-            print(y)
             if x%y == 0:
                 x += 2
                 break
@@ -67,8 +69,23 @@ def count_primes(number):
     print(primes)
     return len(primes)
 
-count_primes(15)
+#cd C:\Users\cpenu\Documents\Python project 1\testing_repository\ 
+#python3 functions_exercises.py
+
+
+def spy_games(num_list):
+    """
+    SPY GAME: Write a function that takes in a list of integers
+    and returns True if it contains 007 in order
+
+    test_list = [1, 0, 3, 0, 5, 6, 7]
+    spy_game([1,0,2,4,0,5,7]) --> True
+    spy_game([1,7,2,0,4,5,0]) --> False    
+    """
+    print(num_list[:])
+    #x = 0
+    #while x <= len(num_list):
 
 
 
-
+spy_games(test_list)
