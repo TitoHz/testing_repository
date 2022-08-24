@@ -94,6 +94,4 @@ def test():
     if spy_games([0, 0, 7, 0, 4, 5]) == True:
         print("yes sir")
     else:
-        print("no, dick sucker")
-
-test()
+        print("FALSE")
